@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+images:
+- name: quay.io/codefresh/cap-app-proxy
+  newName: dustinvanbuskirk/cap-app-proxy
+  newTag: 1.2056.0
+- name: alpine
+  newName: dustinvanbuskirk/alpine
+  newTag: '3.16'
+
+resources:
+- github.com/codefresh-io/csdp-official.git/csdp/hybrid/basic/apps/app-proxy?ref=0.1.20

@@ -1,0 +1,6 @@
+dependencies:
+- name: codefresh-tunnel-client
+  repository: https://chartmuseum.codefresh.io/codefresh-tunnel-client
+  version: 0.1.11
+digest: sha256:f5bacae9504675c2cd2efd4473f05abf164dbb553de0ebf91340564289c46bc2
+generated: "2023-01-25T19:57:33.892244+02:00"

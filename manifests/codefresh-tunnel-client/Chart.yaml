@@ -1,0 +1,10 @@
+apiVersion: v2
+name: tunnel-client
+description: Codefresh tunnel client for ingressless operation of runtimes
+dependencies:
+  - name: codefresh-tunnel-client
+    repository: https://chartmuseum.codefresh.io/codefresh-tunnel-client
+    version: 0.1.11
+type: application
+version: 1.0.0
+appVersion: "1.0.0"

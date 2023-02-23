@@ -1,0 +1,8 @@
+
+{{ $tunnelClientContext := (index .Subcharts "codefresh-tunnel-client")}}
+{{ $tunnel := (get .Values "tunnel") }}
+{{ $tunnelServer := (get .Values "tunnelServer") }}
+{{ $_ := set $tunnelClientContext.Values.tunnel "ipsAllowList" $tunnel.ipsAllowList }}
+{{ $_ := set $tunnelClientContext.Values.tunnel "subdomainPrefix" $tunnel.subdomainPrefix }}
+{{ $_ := set $tunnelClientContext.Values.tunnelServer "host" $tunnelServer.host }}
+{{- include "codefresh-tunnel-client.resources" $tunnelClientContext }}
