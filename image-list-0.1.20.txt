@@ -15,6 +15,7 @@ quay.io/codefresh/argo-rollouts:v1.2.0-cap-CR-10626
 quay.io/codefresh/argocli:v3.4-cap-CR-15902
 quay.io/codefresh/argoexec:v3.4-cap-CR-15902
 quay.io/codefresh/workflow-controller:v3.4-cap-CR-15902
+quay.io/codefresh/cap-app-proxy:1.2056.0
 alpine:3.16
 nginx:1.22-alpine
 quay.io/codefresh/sealed-secrets-controller:v0.17.5

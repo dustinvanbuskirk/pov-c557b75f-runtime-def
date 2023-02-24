@@ -23,7 +23,7 @@ do
   printf '%s\n' "$p"' ---> '"$n"
   if [[ "$dryrun" == "" ]] 
   then
-    docker pull $p 
+    docker pull --platform=linux/amd64 $p 
     docker tag $p $n
     docker push $n
   fi
