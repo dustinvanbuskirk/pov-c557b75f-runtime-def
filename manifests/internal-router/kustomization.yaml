@@ -3,7 +3,7 @@ kind: Kustomization
 
 images:
 - name: nginx
-  newName: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/nginx
+  newName: custom_registry/nginx
   newTag: 1.22-alpine
 
 resources:
