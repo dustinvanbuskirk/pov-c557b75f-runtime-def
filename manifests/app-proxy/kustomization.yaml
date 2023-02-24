@@ -3,10 +3,10 @@ kind: Kustomization
 
 images:
 - name: quay.io/codefresh/cap-app-proxy
-  newName: dustinvanbuskirk/cap-app-proxy
+  newName: custom_registry/cap-app-proxy
   newTag: 1.2056.0
 - name: alpine
-  newName: dustinvanbuskirk/alpine
+  newName: custom_registry/alpine
   newTag: '3.16'
 
 resources:

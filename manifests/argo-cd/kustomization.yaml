@@ -3,13 +3,13 @@ kind: Kustomization
 
 images:
 - name: quay.io/codefresh/argocd
-  newName: dustinvanbuskirk/argocd
+  newName: custom_registry/argocd
   newTag: v2.4.15-cap-CR-15677-rollout-rollback
 - name: ghcr.io/dexidp/dex
-  newName: dustinvanbuskirk/dex
+  newName: custom_registry/dex
   newTag: v2.35.3-distroless
 - name: quay.io/codefresh/redis
-  newName: dustinvanbuskirk/redis
+  newName: custom_registry/redis
   newTag: 7.0.4-alpine
 
 patches:

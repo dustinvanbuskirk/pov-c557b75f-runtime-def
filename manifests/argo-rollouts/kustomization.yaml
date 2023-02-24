@@ -3,7 +3,7 @@ kind: Kustomization
 
 images:
 - name: quay.io/codefresh/argo-rollouts
-  newName: dustinvanbuskirk/argo-rollouts
+  newName: custom_registry/argo-rollouts
   newTag: v1.2.0-cap-CR-10626
 
 resources:

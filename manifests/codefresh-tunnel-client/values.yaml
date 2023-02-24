@@ -2,5 +2,5 @@ codefresh-tunnel-client:
   libraryMode: true
 
   image:
-    repository: dustinvanbuskirk/frpc
+    repository: custom_registry/frpc
     tag: "2022.10.09-b0811fd"
