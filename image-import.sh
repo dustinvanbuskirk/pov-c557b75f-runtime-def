@@ -55,7 +55,7 @@ then
   cat $runtime_file >> manifest_updates.log
   echo '==========================================================' >> manifest_updates.log
   echo "New $runtime_file" >> manifest_updates.log
-  echo '==========================================================' >> manifest_updates.logelse
+  echo '==========================================================' >> manifest_updates.log
   sed -i .bak "s:git_org/git_repo:$git_repository:g" $runtime_file
   cat $runtime_file >> manifest_updates.log
   printf 'See manifest_updates.log for details.'
@@ -81,7 +81,7 @@ else
   cat $runtime_file >> manifest_dryrun.log
   echo '==========================================================' >> manifest_dryrun.log
   echo "New $runtime_file" >> manifest_dryrun.log
-  echo '==========================================================' >> manifest_dryrun.logelse
+  echo '==========================================================' >> manifest_dryrun.log
   sed "s:git_org/git_repo:$git_repository:g" $runtime_file >> manifest_dryrun.log
   printf 'See manifest_dryrun.log for details.'
 fi
