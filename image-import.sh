@@ -33,7 +33,7 @@ if [[ "$dryrun" == "" ]]
 then
   printf 'Applying Manifest Changes'
   echo 'Manifest Updates' > manifest_updates.log
-  for f in `grep -rl custom_repository ./manifests`
+  for f in `grep -rl custom_registry ./manifests`
   do
     printf "Updating $f with $repository\n"
     echo '==========================================================' >> manifest_updates.log
@@ -43,13 +43,13 @@ then
     echo '==========================================================' >> manifest_updates.log
     echo "New $f" >> manifest_updates.log
     echo '==========================================================' >> manifest_updates.log
-    sed -i .bak "s:custom_repository:$repository:g" $f >> manifest_updates.log
+    sed -i .bak "s:custom_registry:$repository:g" $f >> manifest_updates.log
   done
   printf 'See manifest_updates.log for details.'
 else
   printf 'Starting dryrun\n'
   echo 'Start Dry Run of Manifest Updates >>>' > manifest_dryrun.log
-  for f in `grep -rl custom_repository ./manifests`
+  for f in `grep -rl custom_registry ./manifests`
   do
     printf "Updating $f with $repository\n"
     echo '==========================================================' >> manifest_dryrun.log
@@ -59,7 +59,7 @@ else
     echo '==========================================================' >> manifest_dryrun.log
     echo "New $f" >> manifest_dryrun.log
     echo '==========================================================' >> manifest_dryrun.log
-    sed "s:custom_repository:$repository:g" $f >> manifest_dryrun.log
+    sed "s:custom_registry:$repository:g" $f >> manifest_dryrun.log
   done
   printf 'See manifest_dryrun.log for details.'
 fi
