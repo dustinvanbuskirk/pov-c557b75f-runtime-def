@@ -9,7 +9,7 @@ images:
   newName: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/codefresh/applicationset
   newTag: v0.4.2-CR-13254-remove-private-logs
 - name: ghcr.io/dexidp/dex
-  newName: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/codefresh/dex
+  newName: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/codefresh/dexidp/dex
   newTag: v2.35.3-distroless
 - name: quay.io/codefresh/redis
   newName: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/codefresh/redis
