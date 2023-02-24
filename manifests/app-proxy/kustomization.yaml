@@ -3,10 +3,10 @@ kind: Kustomization
 
 images:
 - name: quay.io/codefresh/cap-app-proxy
-  newName: custom_registry/codefresh/cap-app-proxy
+  newName: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/codefresh/cap-app-proxy
   newTag: 1.2056.0
 - name: alpine
-  newName: custom_registry/alpine
+  newName: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/alpine
   newTag: '3.16'
 
 resources:

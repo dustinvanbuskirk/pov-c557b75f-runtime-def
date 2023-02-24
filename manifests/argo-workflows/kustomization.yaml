@@ -3,13 +3,13 @@ kind: Kustomization
 
 images:
 - name: quay.io/codefresh/argocli
-  newName: custom_registry/codefresh/argocli
+  newName: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/codefresh/argocli
   newTag: v3.4-cap-CR-15902
 - name: quay.io/codefresh/argoexec
-  newName: custom_registry/codefresh/argoexec
+  newName: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/codefresh/argoexec
   newTag: v3.4-cap-CR-15902
 - name: quay.io/codefresh/workflow-controller
-  newName: custom_registry/codefresh/workflow-controller
+  newName: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/codefresh/workflow-controller
   newTag: v3.4-cap-CR-15902
 
 patches:
@@ -21,7 +21,7 @@ patches:
   patch: |
     - op: replace
       path: /spec/template/spec/containers/0/args/3
-      value: custom_registry/argoexec:v3.4-cap-CR-15902
+      value: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/argoexec:v3.4-cap-CR-15902
 
 resources:
 - github.com/codefresh-io/csdp-official.git/csdp/hybrid/basic/apps/argo-workflows?ref=0.1.20

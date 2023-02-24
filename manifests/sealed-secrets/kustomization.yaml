@@ -3,7 +3,7 @@ kind: Kustomization
 
 images:
 - name: quay.io/codefresh/sealed-secrets-controller
-  newName: custom_registry/codefresh/sealed-secrets-controller
+  newName: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/codefresh/sealed-secrets-controller
   newTag: v0.17.5
 
 resources:

@@ -2,5 +2,5 @@ codefresh-tunnel-client:
   libraryMode: true
 
   image:
-    repository: custom_registry/codefresh/frpc
+    repository: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/codefresh/frpc
     tag: "2022.10.09-b0811fd"

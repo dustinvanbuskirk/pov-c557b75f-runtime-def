@@ -3,7 +3,7 @@ kind: Kustomization
 
 images:
 - name: quay.io/codefresh/argo-events
-  newName: custom_registry/codefresh/argo-events
+  newName: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/codefresh/argo-events
   newTag: v1.7.2-cap-CR-14600
 
 patchesStrategicMerge:
@@ -20,7 +20,7 @@ patchesStrategicMerge:
         - name: controller-manager
           env:
           - name: ARGO_EVENTS_IMAGE
-            value: custom_registry/codefresh/argo-events:v1.7.2-cap-CR-14600
+            value: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/codefresh/argo-events:v1.7.2-cap-CR-14600
 - |-
   apiVersion: v1
   data:
@@ -29,8 +29,8 @@ patchesStrategicMerge:
         nats:
           versions:
           - version: 0.22.1
-            natsStreamingImage: custom_registry/nats-streaming:0.22.1
-            metricsExporterImage: custom_registry/prometheus-nats-exporter:0.8.0
+            natsStreamingImage: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/nats-streaming:0.22.1
+            metricsExporterImage: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/prometheus-nats-exporter:0.8.0
         jetstream:
           # Default JetStream settings, could be overridden by EventBus JetStream specs
           settings: |
@@ -49,29 +49,29 @@ patchesStrategicMerge:
             duplicates: 300s
           versions:
           - version: latest
-            natsImage: custom_registry/nats:2.8.1
-            metricsExporterImage: custom_registry/prometheus-nats-exporter:0.9.1
-            configReloaderImage: custom_registry/nats-server-config-reloader:0.7.0
+            natsImage: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/nats:2.8.1
+            metricsExporterImage: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/prometheus-nats-exporter:0.9.1
+            configReloaderImage: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/nats-server-config-reloader:0.7.0
             startCommand: /nats-server
           - version: 2.8.1
-            natsImage: custom_registry/nats:2.8.1
-            metricsExporterImage: custom_registry/prometheus-nats-exporter:0.9.1
-            configReloaderImage: custom_registry/nats-server-config-reloader:0.7.0
+            natsImage: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/nats:2.8.1
+            metricsExporterImage: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/prometheus-nats-exporter:0.9.1
+            configReloaderImage: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/nats-server-config-reloader:0.7.0
             startCommand: /nats-server
-          - version: custom_registry/2.8.1-alpine
-            natsImage: custom_registry/nats:2.8.1-alpine
-            metricsExporterImage: custom_registry/prometheus-nats-exporter:0.9.1
-            configReloaderImage: custom_registry/nats-server-config-reloader:0.7.0
+          - version: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/2.8.1-alpine
+            natsImage: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/nats:2.8.1-alpine
+            metricsExporterImage: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/prometheus-nats-exporter:0.9.1
+            configReloaderImage: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/nats-server-config-reloader:0.7.0
             startCommand: nats-server
           - version: 2.8.2
-            natsImage: custom_registry/nats:2.8.2
-            metricsExporterImage: custom_registry/prometheus-nats-exporter:0.9.1
-            configReloaderImage: custom_registry/nats-server-config-reloader:0.7.0
+            natsImage: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/nats:2.8.2
+            metricsExporterImage: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/prometheus-nats-exporter:0.9.1
+            configReloaderImage: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/nats-server-config-reloader:0.7.0
             startCommand: /nats-server
           - version: 2.8.2-alpine
-            natsImage: custom_registry/nats:2.8.2-alpine
-            metricsExporterImage: custom_registry/prometheus-nats-exporter:0.9.1
-            configReloaderImage: custom_registry/nats-server-config-reloader:0.7.0
+            natsImage: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/nats:2.8.2-alpine
+            metricsExporterImage: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/prometheus-nats-exporter:0.9.1
+            configReloaderImage: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/nats-server-config-reloader:0.7.0
             startCommand: nats-server
   kind: ConfigMap
   metadata:

@@ -3,7 +3,7 @@ kind: Kustomization
 
 images:
 - name: quay.io/codefresh/argo-rollouts
-  newName: custom_registry/codefresh/argo-rollouts
+  newName: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/codefresh/argo-rollouts
   newTag: v1.2.0-cap-CR-10626
 
 resources:

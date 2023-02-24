@@ -3,16 +3,16 @@ kind: Kustomization
 
 images:
 - name: quay.io/codefresh/argocd
-  newName: custom_registry/codefresh/argocd
+  newName: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/codefresh/argocd
   newTag: v2.4.15-cap-CR-15677-rollout-rollback
 - name: quay.io/codefresh/applicationset
-  newName: custom_registry/codefresh/applicationset
+  newName: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/codefresh/applicationset
   newTag: v0.4.2-CR-13254-remove-private-logs
 - name: ghcr.io/dexidp/dex
-  newName: custom_registry/codefresh/dex
+  newName: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/codefresh/dex
   newTag: v2.35.3-distroless
 - name: quay.io/codefresh/redis
-  newName: custom_registry/codefresh/redis
+  newName: harbor.dvb.sales-dev.codefresh.io/codefresh-poc/codefresh/redis
   newTag: 7.0.4-alpine
 
 patches:
