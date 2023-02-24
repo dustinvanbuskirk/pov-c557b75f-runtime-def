@@ -1,5 +1,5 @@
 quay.io/codefresh/argocd:v2.4.15-cap-CR-15677-rollout-rollback
-quay.io/codefresh/applicationset:v0.4.2-CR-13254-remove-private-log
+quay.io/codefresh/applicationset:v0.4.2-CR-13254-remove-private-logs
 ghcr.io/dexidp/dex:v2.35.3-distroless
 quay.io/codefresh/redis:7.0.4-alpine
 quay.io/codefresh/argo-events:v1.7.2-cap-CR-14600
