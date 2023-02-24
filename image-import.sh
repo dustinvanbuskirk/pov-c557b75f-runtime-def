@@ -48,7 +48,7 @@ then
     sed -i .bak "s:custom_registry:$docker_registry:g" $f
     cat $f >> manifest_updates.log
   done
-  printf 'Applying runtime.yaml changes.'
+  printf 'Applying runtime.yaml changes.\n'
   echo '==========================================================' >> manifest_updates.log
   echo "Original $runtime_file" >> manifest_updates.log
   echo '==========================================================' >> manifest_updates.log
@@ -72,11 +72,9 @@ else
     echo '==========================================================' >> manifest_dryrun.log
     echo "New $f" >> manifest_dryrun.log
     echo '==========================================================' >> manifest_dryrun.log
-    sed "s:custom_registry:$docker_registry:g" $f
-    sed -i .bak "s:noam-codefresh/internal-runtime-def:$git_repository:g" $f
-    cat $f >> manifest_dryrun.log
+    sed "s:custom_registry:$docker_registry:g" $f >> manifest_dryrun.log
   done
-  printf 'Applying runtime.yaml changes.'
+  printf 'Applying runtime.yaml changes.\n'
   echo '==========================================================' >> manifest_dryrun.log
   echo "Original $runtime_file" >> manifest_dryrun.log
   echo '==========================================================' >> manifest_dryrun.log
@@ -84,7 +82,6 @@ else
   echo '==========================================================' >> manifest_dryrun.log
   echo "New $runtime_file" >> manifest_dryrun.log
   echo '==========================================================' >> manifest_dryrun.logelse
-  sed -i .bak "s:git_org/git_repo:$git_repository:g" $runtime_file
-  cat $runtime_file >> manifest_dryrun.log
+  sed "s:git_org/git_repo:$git_repository:g" $runtime_file >> manifest_dryrun.log
   printf 'See manifest_dryrun.log for details.'
 fi
