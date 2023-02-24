@@ -26,6 +26,7 @@ kustomize build manifests/argo-cd/clsuter-resources | kubectl apply -f -
 argo-cd
 -------
 quay.io/codefresh/argocd:v2.4.15-cap-CR-15677-rollout-rollback
+quay.io/codefresh/applicationset:v0.4.2-CR-13254-remove-private-log
 ghcr.io/dexidp/dex:v2.35.3-distroless
 quay.io/codefresh/redis:7.0.4-alpine
 
